@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+}
+
+.extra-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.editButton{
+    background-color: darkolivegreen;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.vertical{
+    display: flex;
+    flex-direction: column;
+    
+    &:first-of-type{
+        border-left: 2px solid blue;
+    }
+}
+
+.indiv {
+    width: 35px;
+    height: 35px;
+    border: 2px solid blue;
+    border-top: none;
+    border-left: none;
+    &:first-of-type {
+        border-top: 2px solid blue;
+    }
+}
+
+.instructions, h1{
+    background-color: palegoldenrod;
+    color: darkgreen;
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}
+
