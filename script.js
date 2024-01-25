@@ -15,13 +15,21 @@ function editGrid(number){
     const squares = document.querySelectorAll(".indiv")
     squares.forEach(square => square.addEventListener("mouseover", function changeColor(){
         square.style.backgroundColor= getRandomColor();
+        // square.style.opacity += '0.1'
     }));
+    document.addEventListener('keydown', function(event){
+        if(event.key === 'Enter'){
+            squares.forEach(square => {square.setAttribute('style', 'background-color: white');})
+        }
+    })
 }
 
 function getRandomColor(){
     let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
     return color;
 }
+
+
 
 const editButton = document.querySelector(".editButton");
 editButton.addEventListener('click', function(){
@@ -38,10 +46,6 @@ editButton.addEventListener('click', function(){
     console.log(userInput);
 })
 
-document.addEventListener('keydown', function(event){
-    if(event.key === 'Enter'){
-        squares.forEach(square => {square.setAttribute('style', 'background-color: white');})
-    }
-})
+
 
 
